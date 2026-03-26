@@ -127,47 +127,35 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // ( -> shift: {, gui: [, shift+gui: <
+        // ( -> shift: {
         lpar_morph: lpar_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&lpar_base>, <&lpar_gui>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        lpar_base: lpar_base {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lpar_gui: lpar_gui {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        // ) -> shift: }, gui: ], shift+gui: >
+        // ) -> shift: }
         rpar_morph: rpar_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&rpar_base>, <&rpar_gui>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        rpar_base: rpar_base {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        rpar_gui: rpar_gui {
+        // < -> shift: [
+        lt_morph: lt_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp GT>;
+            bindings = <&kp LT>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // > -> shift: ]
+        gt_morph: gt_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GT>, <&kp RBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -222,6 +210,12 @@
             bindings = <&bspc_morph>;
         };
 
+        combo_lt {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&lt_morph>;
+        };
+
         combo_caps_word {
             timeout-ms = <100>;
             key-positions = <50 53>;
@@ -251,7 +245,7 @@
             bindings = <
 &none      &none          &none          &none          &none          &none          &none              &none          &none          &none          &none          &none          &none          &none      &none      &none              &none
 &none      &none          &none          &none          &none          &none          &none              &none          &none          &none          &none          &none          &none          &kp BSPC
-&kp ESC    &kp J          &kp G          &kp M          &kp P          &kp V          &equals_morph      &kp SEMI       &dot_morph     &comma_morph   &slash_morph   &none          &none          &none      &none
+&kp ESC    &kp J          &kp G          &kp M          &kp P          &kp V          &equals_morph      &kp SEMI       &dot_morph     &comma_morph   &slash_morph   &gt_morph         &none          &none      &none
 &kp TAB    &hml LCTRL R   &hml LALT S    &hml_n LGUI N  &hml LSHFT D   &kp W          &kp SQT            &hmr RSHFT A   &hmr RGUI E    &hmr RALT I    &hmr RCTRL H   &rpar_morph    &kp RET        &none
 &mt LSHFT ESC &kp X          &kp F          &kp L          &kp C          &kp B          &minus_morph       &kp U          &kp O          &kp Y          &kp K          &kp LA(LG(LC(T))) &none      &none
 &none      &none          &none          &lt 1 T        &lt 2 SPACE    &none          &none              &none          &none          &none          &none
