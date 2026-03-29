@@ -258,7 +258,7 @@
 &trans     &trans         &trans         &trans         &trans         &trans         &trans             &kp TILDE      &kp PIPE       &kp AMPS       &trans         &trans         &trans         &trans     &trans
 &trans     &trans         &trans         &trans         &trans         &trans         &kp GRAVE          &kp ASTRK      &kp HASH       &kp AT         &kp UNDER      &trans         &trans         &trans
 &trans     &trans         &trans         &trans         &trans         &trans         &trans             &kp CARET      &kp DLLR       &kp PRCNT      &trans         &trans         &trans         &trans
-&trans     &trans         &trans         &trans         &kp BSPC       &trans         &trans             &trans         &trans         &trans         &trans
+&trans     &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans         &trans
             >;
         };
 
