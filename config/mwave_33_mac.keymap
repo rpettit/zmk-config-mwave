@@ -161,48 +161,48 @@
         compatible = "zmk,combos";
 
         combo_z {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <61 62>;
             bindings = <&kp Z>;
             layers = <0 1>;
         };
 
         combo_q {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <33 34>;
             bindings = <&kp Q>;
             layers = <0 1>;
         };
 
         combo_copy {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <62 63>;
             bindings = <&kp LG(C)>;
             layers = <0 1>;
         };
 
         combo_paste {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <62 64>;
             bindings = <&kp LG(V)>;
             layers = <0 1>;
         };
 
         combo_sel_all {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <61 64>;
             bindings = <&kp LG(A)>;
             layers = <0 1>;
         };
 
         combo_lprn {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <53 54>;
             bindings = <&lpar_morph>;
         };
 
         combo_lt {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <38 39>;
             bindings = <&lt_morph>;
         };
